@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+
+    Qual o seu país? 
+
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <div id="res">Resposta</div>
+
+    <script>
+        function clicar() {
+            var pais = document.querySelector('input#pais').value
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `<p>Seu país é <strong>${pais}</strong>.</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Vocè é <strong>Brasileiro!</strong></p>` 
+             } else { 
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+             }
+        }
+        //ESSE EXERCÍCIO ME DEU UM TRABALHO DE TRÊS DIAS POR CAUSA DO .value QUE EU NÃO COLOQUEI QUE ÓDIO 
+    </script>
+</body>
+</html>
